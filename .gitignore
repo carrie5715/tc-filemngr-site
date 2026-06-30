@@ -35,3 +35,7 @@ Thumbs.db
 
 # TypeScript
 *.tsbuildinfo
+
+# Firebase
+.firebase/
+firebase-debug.log
