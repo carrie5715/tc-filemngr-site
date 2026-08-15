@@ -14,7 +14,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "nuxt typecheck",
-    "prepare": "husky"
+    "prepare": "husky",
+    "deploy": "nuxt generate && firebase deploy --only hosting"
   },
   "dependencies": {
     "nuxt": "^3.17.5"
@@ -26,7 +27,8 @@
     "lint-staged": "^15.5.2",
     "prettier": "^3.5.3",
     "sass": "^1.89.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "firebase-tools": "^14.0.0"
   },
   "allowScripts": {
     "esbuild": true,
