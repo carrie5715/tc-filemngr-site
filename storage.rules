@@ -1,0 +1,9 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /releases/{allPaths=**} {
+      allow read: if true; // 誰でも読み取り可（公開ダウンロード）
+      allow write: if false; // クライアントからの書き込み不可
+    }
+  }
+}
