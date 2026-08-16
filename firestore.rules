@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /releases/{version} {
+      allow read: if true; // 誰でも読み取り可
+      allow write: if false; // クライアントからの書き込み不可（GitHub Actions の Admin SDK のみ）
+    }
+  }
+}
